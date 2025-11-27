@@ -1,0 +1,220 @@
+\documentclass[conference]{IEEEtran}
+\IEEEoverridecommandlockouts
+% The preceding line is only needed to identify funding in the first footnote. If that is unneeded, please comment it out.
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
+    T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
+\begin{document}
+
+\bibliographystyle{ieeetr}  % Style of citations (IEEE, APA, etc.)
+
+
+\title{Design and Electromagnetic Characterisation of a Dual-Resonant SRR-Based Biosensor for Multi-Class Cancer Cell Differentiation in the Sub-6 GHz Band\\
+
+
+}
+
+\maketitle
+
+\begin{abstract}
+ *CRITICAL: Do Not Use Symbols, Special Characters, Footnotes, 
+or Math in Paper Title or Abstract.
+\end{abstract}
+
+\begin{IEEEkeywords}
+component, formatting, style, styling, insert
+\end{IEEEkeywords}
+
+\section{Introduction}
+Microwave biosensing leverages the interaction between electromagnetic fields and biological materials to enable label-free, non-invasive characterisation of biological samples \cite{camli2017cost}. It is suitable for identifying and differentiating cancer cells based on their electrical properties. This is because this type of biosensor exploits the sensitivity of resonant structures to variations in the dielectric properties of MUT. The dielectric properties of biological tissues—specifically permittivity and conductivity—vary significantly between healthy and malignant cells, providing a measurable basis for cancer detection and classification \cite{bindu2006microwave}.
+Metamaterial-based resonators, such as split-ring resonators (SRRs) and complementary split-ring resonators (CSRRs), are widely used sensing elements due to their small size, strong field confinement, and compact fabrication layouts \cite{srivastava2023metamaterial}, \cite{bonache2006electrical}. Sensors made of these composites also display high sensitivity and Q-factor, label-free detection, and real-time sensing capabilities \cite{srivastava2023metamaterial}. These structures generate localised electromagnetic fields which are highly sensitive to dielectric perturbations in their vicinity, enabling enhanced detection performance. Their small size, simple geometry, and ease of fabrication have led to applications in gas sensing \cite{rawat2018nanomaterial}, \cite{ali2016microwave}, chemical detection \cite{sadeqi2017low}, \cite{salim2018low}, and biological sensing \cite{torun2014antenna}, \cite{lee2013asymmetric}.
+Fundamental research has established that cancer cell lines exhibit distinct dielectric properties across microwave frequencies. Researchers in \cite{jithin2016dielectric} characterised the permittivity and conductivity of MCF7, MDA-MB-231, HS578T, and T47D breast cancer cell lines between 200 MHz and 13.6 GHz using the open-ended coaxial cable technique. Their measurements revealed that the complex permittivities of the cells have an inverse relationship with frequency, while the conductivities are directly proportional. Their study noted that cancer cells cause significant microwave scattering due to their high dielectric constants. Similarly, \cite{nerguizian2017characterization} extended this work by measuring the complex permittivity of multiple cancer cell lines, including Cervical (HeLa), Prostate (PC3), Breast (MDA231), and Uveal melanoma at microwave frequencies. In \cite{fernandez2024dielectric}, dielectric microwave spectroscopy was employed. An open-ended coaxial probe within the 1-8 GHz range was utilised to differentiate ductal carcinoma, lobular carcinoma, mucinous carcinoma, and fibroadenoma based on permittivity and conductivity measurements. Finally, \cite{di2017experimental} measured the dielectric behaviour of breast cancer tissues up to 50 GHz and confirmed that their properties change noticeably with frequency. 
+Several implementations of SRR-based biosensors have demonstrated sensitivity to biological samples. An SRR-based sensor on FR-4 was fabricated in \cite{jabire2025development} and tested with four breast cancer cell lines: HS578, MCF-7, MDA-MB-231, and MDA-2. They modelled each cell as a 1 mm hemispherical sample placed in the resonator gap and assigned dielectric values from earlier measurements \cite{jithin2016dielectric}. The sensor responded differently to each cell type, with sensitivities ranging from about 1\% to 10\% relative to air. The study in \cite{lee2013asymmetric} demonstrated an antenna-coupled SRR for biosensing applications, while \cite{torun2014antenna} developed an asymmetric SRR-based biosensor for label-free stress biomarker detection. \cite{ebrahimi2018differential} proposed a differential microwave sensor by loading a microstrip line with two identical uncoupled SRR on a 0.762 mm thick Rogers RO4350 substrate, demonstrating improved sensitivity for minor dielectric changes in solid dielectric samples through the generation of two transmission zeros due to asymmetric perturbation. \cite{haq2019dual} developed dual-notch microwave sensors based on complementary metamaterial resonators, while \cite{bonache2006electrical} investigated the electrical characteristics of complementary metamaterial resonators for sensing applications.
+In most reported studies, flame-retardant 4 (FR-4) has been used as a dielectric substrate \cite{rawat2016hazardous}. However, various other dielectric substrates, such as RT/Duroid \cite{salim2018review}, metallophthalocyanines, and metal oxide substrates \cite{nicolay2018saw}, are also employed to achieve enhanced performance \cite{srivastava2023metamaterial}. The choice of substrate material significantly influences sensor performance characteristics, including resonance frequency, quality factor, and sensitivity.
+Most SRR-based sensors still rely on a single resonance, which limits their capability to detect the presence of a sample and struggle to separate multiple cell types on the same platform. Many designs still use FR-4, which does not deliver the best performance. Issues such as environmental drift and coupling between nearby resonators are also not fully addressed in the current work.
+Existing SRR-based biosensors operate in single-resonant modes. This approach makes it difficult to distinguish among multiple cancer cell types on a single platform. Additionally, many reported sensors utilise FR-4 substrates \cite{jabire2025development}[15], which, while cost-effective, may not provide optimal performance characteristics. Environmental cross-sensitivity and mutual coupling between resonator elements remain inadequately addressed in current designs. Furthermore, the application of resonator-based differentiation techniques specifically within the Sub-6 GHz band—a frequency range offering favourable propagation characteristics and reduced tissue attenuation—remains underdeveloped despite its practical advantages for biomedical sensing applications.
+To overcome these limitations, this work introduces a dual-resonant SRR-based biosensor that generates two independent resonance frequencies, thereby enabling multi-class cancer cell differentiation through enhanced spectral information. This configuration provides multiple data points for classification, thereby improving discrimination compared to single-resonant designs. The structure is optimised to minimise mutual coupling between resonator elements while maintaining high sensitivity to dielectric perturbations. Operating within the Sub-6 GHz band, the proposed sensor leverages favourable electromagnetic propagation characteristics for biological tissue interaction while maintaining compatibility with standard measurement instrumentation.
+ 
+
+\section{METHODOLOGY}
+
+\subsection{Theoretical Framework}
+
+\subsection{Experimental Setup}
+
+
+\section{RESULTS \& DISCUSSION}
+Before you begin to format your paper, first write and save the content as a 
+separate text file. Complete all content and organizational editing before 
+formatting. Please note sections \ref{AA}--\ref{SCM} below for more information on 
+proofreading, spelling and grammar.
+
+Keep your text and graphic files separate until after the text has been 
+formatted and styled. Do not number text heads---{\LaTeX} will do that 
+for you.
+
+\subsection{Abbreviations and Acronyms}\label{AA}
+Define abbreviations and acronyms the first time they are used in the text, 
+even after they have been defined in the abstract. Abbreviations such as 
+IEEE, SI, MKS, CGS, ac, dc, and rms do not have to be defined. Do not use 
+abbreviations in the title or heads unless they are unavoidable.
+
+\subsection{Units}
+\begin{itemize}
+\item Use either SI (MKS) or CGS as primary units. (SI units are encouraged.) English units may be used as secondary units (in parentheses). An exception would be the use of English units as identifiers in trade, such as ``3.5-inch disk drive''.
+\item Avoid combining SI and CGS units, such as current in amperes and magnetic field in oersteds. This often leads to confusion because equations do not balance dimensionally. If you must use mixed units, clearly state the units for each quantity that you use in an equation.
+\item Do not mix complete spellings and abbreviations of units: ``Wb/m\textsuperscript{2}'' or ``webers per square meter'', not ``webers/m\textsuperscript{2}''. Spell out units when they appear in text: ``. . . a few henries'', not ``. . . a few H''.
+\item Use a zero before decimal points: ``0.25'', not ``.25''. Use ``cm\textsuperscript{3}'', not ``cc''.)
+\end{itemize}
+
+\subsection{Equations}
+Number equations consecutively. To make your 
+equations more compact, you may use the solidus (~/~), the exp function, or 
+appropriate exponents. Italicize Roman symbols for quantities and variables, 
+but not Greek symbols. Use a long dash rather than a hyphen for a minus 
+sign. Punctuate equations with commas or periods when they are part of a 
+sentence, as in:
+\begin{equation}
+a+b=\gamma\label{eq}
+\end{equation}
+
+Be sure that the 
+symbols in your equation have been defined before or immediately following 
+the equation. Use ``\eqref{eq}'', not ``Eq.~\eqref{eq}'' or ``equation \eqref{eq}'', except at 
+the beginning of a sentence: ``Equation \eqref{eq} is . . .''
+
+\subsection{\LaTeX-Specific Advice}
+
+Please use ``soft'' (e.g., \verb|\eqref{Eq}|) cross references instead
+of ``hard'' references (e.g., \verb|(1)|). That will make it possible
+to combine sections, add equations, or change the order of figures or
+citations without having to go through the file line by line.
+
+Please don't use the \verb|{eqnarray}| equation environment. Use
+\verb|{align}| or \verb|{IEEEeqnarray}| instead. The \verb|{eqnarray}|
+environment leaves unsightly spaces around relation symbols.
+
+Please note that the \verb|{subequations}| environment in {\LaTeX}
+will increment the main equation counter even when there are no
+equation numbers displayed. If you forget that, you might write an
+article in which the equation numbers skip from (17) to (20), causing
+the copy editors to wonder if you've discovered a new method of
+counting.
+
+{\BibTeX} does not work by magic. It doesn't get the bibliographic
+data from thin air but from .bib files. If you use {\BibTeX} to produce a
+bibliography you must send the .bib files. 
+
+{\LaTeX} can't read your mind. If you assign the same label to a
+subsubsection and a table, you might find that Table I has been cross
+referenced as Table IV-B3. 
+
+{\LaTeX} does not have precognitive abilities. If you put a
+\verb|\label| command before the command that updates the counter it's
+supposed to be using, the label will pick up the last counter to be
+cross referenced instead. In particular, a \verb|\label| command
+should not go before the caption of a figure or a table.
+
+Do not use \verb|\nonumber| inside the \verb|{array}| environment. It
+will not stop equation numbers inside \verb|{array}| (there won't be
+any anyway) and it might stop a wanted equation number in the
+surrounding equation.
+
+\subsection{Some Common Mistakes}\label{SCM}
+\begin{itemize}
+\item The word ``data'' is plural, not singular.
+\item The subscript for the permeability of vacuum $\mu_{0}$, and other common scientific constants, is zero with subscript formatting, not a lowercase letter ``o''.
+\item In American English, commas, semicolons, periods, question and exclamation marks are located within quotation marks only when a complete thought or name is cited, such as a title or full quotation. When quotation marks are used, instead of a bold or italic typeface, to highlight a word or phrase, punctuation should appear outside of the quotation marks. A parenthetical phrase or statement at the end of a sentence is punctuated outside of the closing parenthesis (like this). (A parenthetical sentence is punctuated within the parentheses.)
+\item A graph within a graph is an ``inset'', not an ``insert''. The word alternatively is preferred to the word ``alternately'' (unless you really mean something that alternates).
+\item Do not use the word ``essentially'' to mean ``approximately'' or ``effectively''.
+\item In your paper title, if the words ``that uses'' can accurately replace the word ``using'', capitalize the ``u''; if not, keep using lower-cased.
+\item Be aware of the different meanings of the homophones ``affect'' and ``effect'', ``complement'' and ``compliment'', ``discreet'' and ``discrete'', ``principal'' and ``principle''.
+\item Do not confuse ``imply'' and ``infer''.
+\item The prefix ``non'' is not a word; it should be joined to the word it modifies, usually without a hyphen.
+\item There is no period after the ``et'' in the Latin abbreviation ``et al.''.
+\item The abbreviation ``i.e.'' means ``that is'', and the abbreviation ``e.g.'' means ``for example''.
+\end{itemize}
+An excellent style manual for science writers is \cite{b7}.
+
+\subsection{Authors and Affiliations}
+\textbf{The class file is designed for, but not limited to, six authors.} A 
+minimum of one author is required for all conference articles. Author names 
+should be listed starting from left to right and then moving down to the 
+next line. This is the author sequence that will be used in future citations 
+and by indexing services. Names should not be listed in columns nor group by 
+affiliation. Please keep your affiliations as succinct as possible (for 
+example, do not differentiate among departments of the same organization).
+
+\subsection{Identify the Headings}
+Headings, or heads, are organizational devices that guide the reader through 
+your paper. There are two types: component heads and text heads.
+
+Component heads identify the different components of your paper and are not 
+topically subordinate to each other. Examples include Acknowledgments and 
+References and, for these, the correct style to use is ``Heading 5''. Use 
+``figure caption'' for your Figure captions, and ``table head'' for your 
+table title. Run-in heads, such as ``Abstract'', will require you to apply a 
+style (in this case, italic) in addition to the style provided by the drop 
+down menu to differentiate the head from the text.
+
+Text heads organize the topics on a relational, hierarchical basis. For 
+example, the paper title is the primary text head because all subsequent 
+material relates and elaborates on this one topic. If there are two or more 
+sub-topics, the next level head (uppercase Roman numerals) should be used 
+and, conversely, if there are not at least two sub-topics, then no subheads 
+should be introduced.
+
+\subsection{Figures and Tables}
+\paragraph{Positioning Figures and Tables} Place figures and tables at the top and 
+bottom of columns. Avoid placing them in the middle of columns. Large 
+figures and tables may span across both columns. Figure captions should be 
+below the figures; table heads should appear above the tables. Insert 
+figures and tables after they are cited in the text. Use the abbreviation 
+``Fig.~\ref{fig}'', even at the beginning of a sentence.
+
+\begin{table}[htbp]
+\caption{Table Type Styles}
+\begin{center}
+\begin{tabular}{|c|c|c|c|}
+\hline
+\textbf{Table}&\multicolumn{3}{|c|}{\textbf{Table Column Head}} \\
+\cline{2-4} 
+\textbf{Head} & \textbf{\textit{Table column subhead}}& \textbf{\textit{Subhead}}& \textbf{\textit{Subhead}} \\
+\hline
+copy& More table copy$^{\mathrm{a}}$& &  \\
+\hline
+\multicolumn{4}{l}{$^{\mathrm{a}}$Sample of a Table footnote.}
+\end{tabular}
+\label{tab1}
+\end{center}
+\end{table}
+
+\begin{figure}[htbp]
+\centerline{\includegraphics{fig1.png}}
+\caption{Example of a figure caption.}
+\label{fig}
+\end{figure}
+
+Figure Labels: Use 8 point Times New Roman for Figure labels. Use words 
+rather than symbols or abbreviations when writing Figure axis labels to
+avoid confusing the reader. As an example, write the quantity 
+``Magnetization'', or ``Magnetization, M'', not just ``M''. If including 
+units in the label, present them within parentheses. Do not label axes only 
+with units. In the example, write ``Magnetization (A/m)'' or ``Magnetization 
+\{A[m(1)]\}'', not just ``A/m''. Do not label axes with a ratio of 
+quantities and units. For example, write ``Temperature (K)'', not 
+``Temperature/K''.
+
+\section{CONCLUSION}
+
+\section*{Acknowledgment}
+
+
+\bibliography{references}     % Your .bib file name without extension
+
+\end{document}
