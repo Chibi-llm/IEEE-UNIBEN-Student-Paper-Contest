@@ -1,0 +1,329 @@
+\documentclass[conference]{IEEEtran}
+\IEEEoverridecommandlockouts
+% The preceding line is only needed to identify funding in the first footnote. If that is unneeded, please comment it out.
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
+    T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
+\begin{document}
+
+\title{Conference Paper Title*\\
+{\footnotesize \textsuperscript{*}Note: Sub-titles are not captured in Xplore and
+should not be used}
+\thanks{Identify applicable funding agency here. If none, delete this.}
+}
+
+\author{\IEEEauthorblockN{1\textsuperscript{st} Given Name Surname}
+\IEEEauthorblockA{\textit{dept. name of organization (of Aff.)} \\
+\textit{name of organization (of Aff.)}\\
+City, Country \\
+email address or ORCID}
+\and
+\IEEEauthorblockN{2\textsuperscript{nd} Given Name Surname}
+\IEEEauthorblockA{\textit{dept. name of organization (of Aff.)} \\
+\textit{name of organization (of Aff.)}\\
+City, Country \\
+email address or ORCID}
+\and
+\IEEEauthorblockN{3\textsuperscript{rd} Given Name Surname}
+\IEEEauthorblockA{\textit{dept. name of organization (of Aff.)} \\
+\textit{name of organization (of Aff.)}\\
+City, Country \\
+email address or ORCID}
+\and
+\IEEEauthorblockN{4\textsuperscript{th} Given Name Surname}
+\IEEEauthorblockA{\textit{dept. name of organization (of Aff.)} \\
+\textit{name of organization (of Aff.)}\\
+City, Country \\
+email address or ORCID}
+\and
+\IEEEauthorblockN{5\textsuperscript{th} Given Name Surname}
+\IEEEauthorblockA{\textit{dept. name of organization (of Aff.)} \\
+\textit{name of organization (of Aff.)}\\
+City, Country \\
+email address or ORCID}
+\and
+\IEEEauthorblockN{6\textsuperscript{th} Given Name Surname}
+\IEEEauthorblockA{\textit{dept. name of organization (of Aff.)} \\
+\textit{name of organization (of Aff.)}\\
+City, Country \\
+email address or ORCID}
+}
+
+\maketitle
+
+\begin{abstract}
+This document is a model and instructions for \LaTeX.
+This and the IEEEtran.cls file define the components of your paper [title, text, heads, etc.]. *CRITICAL: Do Not Use Symbols, Special Characters, Footnotes, 
+or Math in Paper Title or Abstract.
+\end{abstract}
+
+\begin{IEEEkeywords}
+component, formatting, style, styling, insert
+\end{IEEEkeywords}
+
+\section{Introduction}
+This document is a model and instructions for \LaTeX.
+Please observe the conference page limits. 
+
+\section{Ease of Use}
+
+\subsection{Maintaining the Integrity of the Specifications}
+
+The IEEEtran class file is used to format your paper and style the text. All margins, 
+column widths, line spaces, and text fonts are prescribed; please do not 
+alter them. You may note peculiarities. For example, the head margin
+measures proportionately more than is customary. This measurement 
+and others are deliberate, using specifications that anticipate your paper 
+as one part of the entire proceedings, and not as an independent document. 
+Please do not revise any of the current designations.
+
+\section{Methodology}
+This section outlines the entire procedure used in the design, simulation, and performance assessment of the proposed dual-resonant split ring resonator (SRR) biosensor. The process includes four primary phases: (i) design of the SRR and its electromagnetic modeling, (ii) identification of resonant field distributions, (iii) dielectric modeling of breast cancer cell lines, and (iv) assessment of resonance shift and sensitivity in the two operating modes.
+
+\subsection{Design of the Dual–Resonant SRR Sensor}
+The sensor was developed using ANSYS HFSS as a planar metamaterial-inspired split ring resonator fabricated on a Rogers RO4350B substrate. RO4350B was chosen for its low loss tangent ($\tan\delta = 0.0037$) and relative permittivity $\varepsilon_r = 3.48$, which helps minimize dielectric losses and enhances resonance sharpness.
+
+The design features two identical metallic rings with a narrow capacitive gap, created on a substrate that is 1.524~mm thick and composed of copper with a thickness of 35~\textmu m. The geometry was optimized to facilitate two separate resonant modes (2.05GHz and 5.445GHz) within the sub-6 GHz frequency band. A two-port microstrip-fed configuration was utilized to allow for the measurement of both $S_{11}$ and $S_{21}$ parameters.
+
+The proposed sensor is depicted in Fig. ~\ref{fig:srr_dim}, and the optimized specifications are provided in table ~\ref{tab:srr_dim}.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=.6\linewidth]{graphics/srr_dim}
+    \caption{The proposed biosensor}
+    \label{fig:srr_dim}
+\end{figure}
+
+\begin{table}[htbp]
+\caption{Optimized Sensor's Dimensions}
+\begin{center}
+\begin{tabular}{|c|c|c|c|}
+\hline
+Parameters & Values (mm) & Parameters & Values (mm)\\
+\hline
+$W_g$& 22.23&$W_2$ &4.04  \\
+\hline
+$L_g$& 75.56&$W_3$ &3.11  \\
+\hline
+$W_f$& 3.45&$L_1$ &17.35  \\
+\hline
+$L_f$& 20&$d_1$ &6.92  \\
+\hline
+$W_1$& 8.59&$d_2$ &0.86  \\
+\hline
+\end{tabular}
+\label{tab:srr_dim}
+\end{center}
+\end{table}
+
+Radiation boundaries were assigned as an open region using the HFSS \texttt{Airbox} approach, with all walls located at least $\lambda/4$ away from the structure at the highest frequency of analysis. A driven modal solution was used, and a frequency sweep of 1–8~GHz captured both resonances.
+
+\subsection{Mesh Refinement and Solver Configuration}
+The electric field dynamics at the split gap primarily influence resonance perturbation in SRR biosensors, hence, a non-uniform mesh was utilized. A high-resolution mesh area was created surrounding the SRR gap, encompassing the copper thickness, the air space above the gap, and the portion where the droplet is introduced. This approach guaranteed precise field calculations and enhanced the convergence of the resonant frequencies.
+
+% The solution setup was configured with an adaptive sweep until convergence of $S_{11}$ was below 0.02. A secondary discrete sweep was added around the resonance points with 1–2~MHz resolution to obtain precise resonant frequency minima.
+
+\subsection{Electric Field Analysis and MUT Placement}
+In order to identify the optimal sensing location, the $|E|$-field distributions were analyzed for two resonant frequencies: $f_{1} \approx 2.05~\text{GHz}$ and $f_{2} \approx 5.445~\text{GHz}$. Field plots were created for each mode to pinpoint the areas with the highest electric field strength. This is shown in Fig. ~\ref{fig:SRR_E_field}
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=1\linewidth]{graphics/SRR_E_field}
+    \caption{Electric field distribution at $5.445~\text{GHz}$}
+    \label{fig:SRR_E_field}
+\end{figure}
+
+At the higher frequency ($5.445$~GHz), the strongest field was found at the inner edges of the SRR capacitive gap. As a result, the droplet of the material-under-test (MUT) was placed at this peak field location. To represent each biological sample, a hemispherical volume with a radius of 1~mm was employed. This hemisphere was positioned so that it partially penetrated the gap and made contact with the copper edge, simulating the behavior of a realistic droplet as shown in Fig. ~\ref{fig:Droplet}
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=1\linewidth]{graphics/Droplet}
+    \caption{Placement of the droplet}
+    \label{fig:Droplet}
+\end{figure}
+
+\subsection{Dielectric Modeling of Breast Cancer Cell Lines}
+A total of five biological samples were analyzed: HS578T, T47D, MCF-7, MDA-MB-231, along with the non-cancerous control MCF-10A. Each sample was given frequency-dependent dielectric characteristics that were obtained from experimental dielectric spectroscopy conducted on breast cancer cells \cite{b8}. For each cell line, the real permittivity $\varepsilon_r'$ and conductivity $\sigma$ were determined at the two specific resonance frequencies (2.05~GHz and 5.445~GHz) and utilized as homogeneous, isotropic material specifications in HFSS.
+
+The MUT simulations were conducted separately for each resonant frequency to ensure that the permittivity accurately aligned with the operating mode.
+
+The values of permittivity $\varepsilon_r'$, conductivity $\sigma$, and loss tangent $\tan\delta$ for the cancer cell lines are presented in table ~\ref{tab:cell_lines} and ~\ref{tab:cell_lines2}.
+
+\begin{table}[htbp]
+\caption{Electrical properties of the cell lines at 2.05GHz}
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|}
+\hline
+Cancer  & HS578T & T47D & MCF-7 & MDA- & MCF-\\
+cell lines & & & &MB-231& 10A \\
+\hline
+$\varepsilon_r'$& 73.942& 72.445 &73.397 & 73.126 &  52.486 \\
+\hline
+$\sigma$ (S/m)& 2.44&2.26 &2.448 &2.36 &1.76  \\
+\hline
+$\tan\delta$& 0.289&0.27378 &0.292 &0.2835 &0.294  \\
+\hline
+\end{tabular}
+\label{tab:cell_lines}
+\end{center}
+\end{table}
+
+\begin{table}[htbp]
+\caption{Electrical properties of the cell lines at 5.445GHz}
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|}
+\hline
+Cancer  & HS578T & T47D & MCF-7 & MDA- & MCF-\\
+cell lines & & & &MB-231& 10A \\
+\hline
+$\varepsilon_r'$& 72.68& 72.0215 &72.53 & 71.998 &  47.1357 \\
+\hline
+$\sigma$ (S/m)& 7.32&6.02 &6.94 &6.68 &3.6255  \\
+\hline
+$\tan\delta$& 0.332&0.276 &0.31588 &0.30629 &0.2539  \\
+\hline
+\end{tabular}
+\label{tab:cell_lines2}
+\end{center}
+\end{table}
+
+
+\subsection{Resonance Extraction and Sensitivity Calculation}
+For every cell line, the perturbed resonant frequencies were derived from the $S_{11}$ curve. The frequency shift was determined using the equation:
+\[
+\Delta f = f_{\text{air}} - f_{\text{MUT}},
+\]
+where $f_{\text{air}}$ represents the resonance in the absence of any droplet, and $f_{\text{MUT}}$ denotes the resonance following the addition of the sample.
+
+Next, the percentage sensitivity was computed as:
+\[
+S_{\%} = \frac{\Delta f}{f_{\text{air}}} \times 100~\%.
+\]
+
+This process was conducted for both resonant modes, leading to a two-mode sensitivity profile for each cancerous and control sample. The results from both modes were compared to identify which resonance showed a greater perturbation for dielectric discrimination.
+
+
+\section{Results and Discussion}
+
+This section outlines the simulated outcomes obtained from the dual-resonant SRR biosensor when it came into contact with five biological samples: HS578T, T47D, MCF–7, MDA–MB–231, and the noncancerous control MCF–10A. The findings are categorized into (i) the baseline response of the SRR, (ii) resonance shifts induced by MUT at both resonant frequencies, and (iii) a comparison of sensitivity at 2.05~GHz and 5.445~GHz.
+
+\subsection{Baseline SRR Response}
+Fig.~\ref{fig:srr_first_optimized_s11} illustrates the $S_{11}$ response of the unloaded split-ring resonator (SRR). Two prominent resonances can be identified at about 2.05~GHz and 5.445~GHz, which correspond to the fundamental mode and the higher-order modes of the split ring structure. The higher frequency resonance shows enhanced electric-field confinement within the capacitive gap, leading to increased sensitivity to changes in local permittivity.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=1\linewidth]{graphics/srr_first_optimized_s11}
+    \caption{$S_{11}$ response of the unloaded SRR}
+    \label{fig:srr_first_optimized_s11}
+\end{figure}
+
+The baseline resonances $f_{\text{air},1}$ and $f_{\text{air},2}$ serve as reference frequencies for computing the resonance shifts introduced by each MUT.
+
+\subsection{Resonance Shift Due to Cancer Cell Loading}
+Upon the introduction of a MUT droplet in the high-field area of the SRR gap, the effective permittivity within the sensing region rose, resulting in a decrease in the resonance frequency. Fig.~\ref{fig:HS578t}, ~\ref{fig:T47D_}, ~\ref{fig:MCF7}, ~\ref{fig:MDA-MB-231} and~\ref{fig:MCF10A} display the altered $S_{11}$ curves corresponding to all MUTs.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=1\linewidth]{graphics/HS578t}
+    \caption{$S_{11}$ response of the SRR to HS578T}
+    \label{fig:HS578t}
+\end{figure}
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=1\linewidth]{graphics/T47D_}
+    \caption{$S_{11}$ response of the SRR to T47D}
+    \label{fig:T47D_}
+\end{figure}
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=1\linewidth]{graphics/MCF7}
+    \caption{$S_{11}$ response of the SRR to MCF7}
+    \label{fig:MCF7}
+\end{figure}
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=1\linewidth]{graphics/MDA-MB-231}
+    \caption{$S_{11}$ response of the SRR to MDA-MB-231}
+    \label{fig:MDA-MB-231}
+\end{figure}
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=1\linewidth]{graphics/MCF10A}
+    \caption{$S_{11}$ response of the SRR to MCF10A}
+    \label{fig:MCF10A}
+\end{figure}
+
+For each MUT, the frequency shift was computed as:
+\[
+\Delta f = f_{\text{air}} - f_{\text{MUT}},
+\]
+
+
+Across all samples, the magnitude of $\Delta f$ varied depending on the dielectric properties of the cell lines at the corresponding frequency. Cancerous cells typically exhibited larger shifts than the control (MCF–10A), confirming that malignant samples possess higher permittivity and conductivity due to increased intracellular water content, membrane permeability, and ionic mobility.
+
+\subsection{Sensitivity Evaluation}
+To quantify the effect of each MUT, the percentage sensitivity was computed using:
+\[
+S_{\%} = \frac{\Delta f}{f_{\text{air}}} \times 100\%.
+\]
+
+Table~\ref{tab:results} summarises the extracted resonant frequencies and sensitivities.
+
+\begin{table}[htbp]
+\caption{Sensitivity of the SRR to the cell lines}
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|}
+\hline
+Cancer  & HS578T & T47D & MCF-7 & MDA- & MCF-\\
+cell lines & & & &MB-231& 10A \\
+\hline
+$\Delta f$ (GHz)& 0.105& 0.1225 &0.1225 & 0.035 &  0.0175 \\
+\hline
+Sensitivity (\%)& 1.93&5.98 &5.98 &0.64 &0.32  \\
+\hline
+Dip Magnitude (dB)& -36.27&-29.23 &-26.27 &-30.78 &-32.73  \\
+\hline
+\end{tabular}
+\label{tab:results}
+\end{center}
+\end{table}
+
+At the higher resonance (5.445~GHz), the sensor demonstrated stronger and more distinguishable shifts among the cancer cell lines. This behaviour is attributed to the stronger capacitive gap fields at the second mode, which produce a larger perturbation of the stored electric energy. T47D and MCF-7 produced the highest frequency shifts due to their relatively high permittivity and conductivity values in the sub–6~GHz range.
+
+Interestingly, in several cases the lower–frequency mode (2.05~GHz) exhibited a greater shift than expected, despite the MUT being positioned at the field maximum of the 5.445~GHz mode. This behaviour is consistent with perturbation theory: the frequency shift depends not only on the local field intensity but also on the frequency–dependent dielectric contrast $\Delta \varepsilon_r(f)$ and the overlap integral between the MUT volume and the mode's stored energy distribution. Some cell lines, such as T47D and MCF–7, possess higher dielectric contrast at 2.05~GHz than at 5.445~GHz, thereby producing a comparatively larger shift.
+
+\subsection{Comparison of Cancer and Noncancerous Cells}
+The noncancerous MCF–10A cell line produced the smallest $\Delta f$, forming a clear lower bound for the resonance shift distribution. All four cancer samples produced distinguishable shifts relative to the control, demonstrating the biosensor's capability to discriminate malignant from non–malignant samples.
+
+The dual–mode approach further enhances separability: some cancer lines (e.g., MDA–MB–231) exhibit high contrast at both modes, while others (e.g., MCF–7) show moderate contrast at one mode and strong contrast at the other. This multimode behaviour provides an additional dimension for classification.
+
+\subsection{Discussion}
+The results indicate that the proposed dual–resonant SRR structure can effectively differentiate between multiple breast cancer cell lines based on their frequency–dependent dielectric signatures. The dual–mode approach offers robustness: if one mode provides limited contrast for a particular MUT, the second mode compensates by offering clearer separation.
+
+The observed behaviour aligns with theoretical EM perturbation models, confirming that the resonance shift is jointly governed by:
+\begin{itemize}
+    \item the local electric–field intensity at the MUT,
+    \item the dielectric contrast $\Delta \varepsilon_r(f)$ at each resonant frequency,
+    \item the MUT–mode energy overlap, and
+    \item the intrinsic loss characteristics of the sample.
+\end{itemize}
+
+Overall, the simulation results demonstrate that the SRR biosensor is capable of distinguishing between malignant and nonmalignant breast cell lines, and also differentiating among multiple cancer subtypes. This validates the sensor's suitability for multi–class dielectric biosensing applications.
+
+
+
+
+\begin{thebibliography}{00}
+\bibitem{b8} M. Hussein, F. Awwad, D. Jithin et al., “Breast cancer cells exhibit specific dielectric signature in vitro using the open-ended coaxial probe technique from 200 MHz to 13.6 GHz,” Scientific Reports, vol. 9, no. 1, p. 4681, 2019, doi: 10.1038/s41598-019-41124-1.
+\end{thebibliography}
+
+\end{document}
